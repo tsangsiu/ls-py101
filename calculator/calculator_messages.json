@@ -1,0 +1,11 @@
+{
+  "welcome": "Welcome to Calculator!",
+  "ask_first_number": "What's the first number?",
+  "ask_second_number": "What's the second number?",
+  "invalid_number": "Hmm... that doesn't look like a valid number.",
+  "ask_operation": "What operation would you like to perform?",
+  "show_operation_options": "[1] Add [2] Subtract [3] Multiply [4] Divide",
+  "invalid_operation_option": "You must choose 1, 2, 3, or 4",
+  "ask_calculate_again": "Would you like to do another calculation? [Y]es or [no]?",
+  "invalid_yes_no": "Hmm... that doesn't look like a valid answer. Please enter [Y]es or [N]o."
+}

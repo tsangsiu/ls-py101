@@ -1,3 +1,8 @@
+import json
+
+with open('calculator_messages.json', 'r') as file:
+    MESSAGES = json.load(file)
+
 def prompt(message):
     print(f'==> {message}')
 
@@ -12,29 +17,29 @@ def invalid_number(number_str):
 def invalid_yes_no(yes_no_str):
     return yes_no_str.lower() not in ['n', 'y', 'no', 'yes']
 
-prompt('Welcome to Calculator!')
+prompt(MESSAGES['welcome'])
 
 while True:
-  prompt("What's the first number?")
+  prompt(MESSAGES['ask_first_number'])
   number1 = input()
 
   while invalid_number(number1):
-      prompt("Hmm... that doesn't look like a valid number.")
+      prompt(MESSAGES['invalid_number'])
       number1 = input()
 
-  prompt("What's the second number?")
+  prompt(MESSAGES['ask_second_number'])
   number2 = input()
 
   while invalid_number(number2):
-      prompt("Hmm... that doesn't look like a valid number.")
+      prompt(MESSAGES['invalid_number'])
       number2 = input()
 
-  prompt('What operation would you like to perform?\n'
-         '1) Add 2) Subtract 3) Multiply 4) Divide')
+  prompt(MESSAGES['ask_operation'])
+  prompt(MESSAGES['show_operation_options'])
   operation = input()
 
   while operation not in ['1', '2', '3', '4']:
-      prompt("You must choose 1, 2, 3, or 4")
+      prompt(MESSAGES['invalid_operation_option'])
       operation = input()
 
   match operation:
@@ -49,13 +54,11 @@ while True:
 
   prompt(f'The result is: {output}')
 
-  prompt('Would you like to do another calculation?\n'
-         '[Y]es or [n]o?')
+  prompt(MESSAGES['ask_calculate_again'])
   calculate_again = input()
 
   while invalid_yes_no(calculate_again):
-      prompt("Hmm... that doesn't look like a valid answer.\n"
-             "Please enter [y]es or [n]o")
+      prompt(MESSAGES['invalid_yes_no'])
       calculate_again = input()
 
   if calculate_again.casefold().startswith('n'):
