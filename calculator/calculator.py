@@ -8,7 +8,7 @@ def prompt(message):
 
 def invalid_number(number_str):
     try:
-        int(number_str)
+        float(number_str)
     except ValueError:
         return True
 
@@ -44,13 +44,13 @@ while True:
 
   match operation:
       case '1':
-          result = int(number1) + int(number2)
+          result = float(number1) + float(number2)
       case '2':
-          result = int(number1) - int(number2)
+          result = float(number1) - float(number2)
       case '3':
-          result = int(number1) * int(number2)
+          result = float(number1) * float(number2)
       case '4':
-          result = int(number1) / int(number2)
+          result = float(number1) / float(number2)
 
   prompt(MESSAGES['display_result'].format(RESULT = result))
 
