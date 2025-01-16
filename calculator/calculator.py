@@ -44,15 +44,15 @@ while True:
 
   match operation:
       case '1':
-          output = int(number1) + int(number2)
+          result = int(number1) + int(number2)
       case '2':
-          output = int(number1) - int(number2)
+          result = int(number1) - int(number2)
       case '3':
-          output = int(number1) * int(number2)
+          result = int(number1) * int(number2)
       case '4':
-          output = int(number1) / int(number2)
+          result = int(number1) / int(number2)
 
-  prompt(f'The result is: {output}')
+  prompt(MESSAGES['display_result'].format(RESULT = result))
 
   prompt(MESSAGES['ask_calculate_again'])
   calculate_again = input()
