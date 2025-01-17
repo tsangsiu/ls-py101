@@ -1,12 +1,33 @@
 {
-  "welcome": "Welcome to Calculator!",
-  "ask_first_number": "What's the first number?",
-  "ask_second_number": "What's the second number?",
-  "invalid_number": "Hmm... that doesn't look like a valid number.",
-  "ask_operation": "What operation would you like to perform?",
-  "show_operation_options": "[1] Add [2] Subtract [3] Multiply [4] Divide",
-  "invalid_operation_option": "You must choose 1, 2, 3, or 4",
-  "display_result": "The result is: {RESULT}",
-  "ask_calculate_again": "Would you like to do another calculation? [Y]es or [no]?",
-  "invalid_yes_no": "Hmm... that doesn't look like a valid answer. Please enter [Y]es or [N]o."
+  "choose_lang": "Please choose a language: 請選擇你的語言：",
+  "display_lang_options": "[1] English   [2] 繁體中文",
+  "display_valid_lang_code_nums": "You must choose 1 or 2. 你必須選 1 或 2。",
+
+  "en": {
+    "welcome": "Welcome to Calculator!",
+    "ask_first_number": "What's the first number?",
+    "ask_second_number": "What's the second number?",
+    "invalid_number": "Hmm... that doesn't look like a valid number.",
+    "ask_operation": "What operation would you like to perform?",
+    "display_operation_options": "[1] Add   [2] Subtract   [3] Multiply   [4] Divide",
+    "invalid_operation_option": "You must choose 1, 2, 3, or 4",
+    "display_result": "The result is: {RESULT}",
+    "ask_calculate_again": "Would you like to do another calculation?",
+    "display_yes_no_options": "[1] Yes   [2] No",
+    "invalid_yes_no": "You must choose 1 or 2"
+  },
+
+  "zh-hk": {
+    "welcome": "歡迎使用本計算器！",
+    "ask_first_number": "請輸入第一個數字：",
+    "ask_second_number": "請輸入第二個數字：",
+    "invalid_number": "請輸入一個有效的數字：",
+    "ask_operation": "你想要怎樣算？",
+    "display_operation_options": "[1] 加 [2] 減 [3] 乘 [4] 除",
+    "invalid_operation_option": "你必須選 1 、 2 、 3 或 4 。",
+    "display_result": "計算結果是： {RESULT}",
+    "ask_calculate_again": "你還要再計算嗎？",
+    "display_yes_no_options": "[1] 要   [2] 不要",
+    "invalid_yes_no": "你必須選 1 或 2。"
+  }
 }
