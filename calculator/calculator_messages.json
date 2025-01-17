@@ -1,20 +1,19 @@
 {
-  "choose_lang": "Please choose a language: 請選擇你的語言：",
-  "display_lang_options": "[1] English   [2] 繁體中文",
-  "display_valid_lang_code_nums": "You must choose either 1 or 2. 你必須選 1 或 2。",
-
   "en": {
+    "choose_lang": "Please choose a language: 請選擇你的語言：",
+    "display_lang_options": "[1] English   [2] 繁體中文",
+    "display_valid_lang_code_nums": "You must choose either 1 or 2. 你必須選 1 或 2。",
     "welcome": "Welcome to Calculator!",
     "ask_first_number": "What's the first number?",
     "ask_second_number": "What's the second number?",
     "invalid_number": "Hmm... that doesn't look like a valid number.",
     "ask_operation": "What operation would you like to perform?",
     "display_operation_options": "[1] Add   [2] Subtract   [3] Multiply   [4] Divide",
-    "invalid_operation_option": "You must choose 1, 2, 3, or 4",
+    "invalid_operation_option": "You must choose 1, 2, 3, or 4.",
     "display_result": "The result is: {RESULT}",
     "ask_calculate_again": "Would you like to do another calculation?",
     "display_yes_no_options": "[1] Yes   [2] No",
-    "invalid_yes_no": "You must choose either 1 or 2"
+    "invalid_yes_no": "You must choose either 1 or 2."
   },
 
   "zh-hk": {
