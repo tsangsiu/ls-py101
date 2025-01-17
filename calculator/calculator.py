@@ -80,3 +80,5 @@ while True:
 
     if calculate_again == '2':
         break
+
+prompt(message('goodbye', lang_code))
