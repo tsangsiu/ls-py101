@@ -100,7 +100,7 @@ while True:
     if calculate_again == '2':
         clear()
         break
-    
+
     clear()
 
 prompt(message('goodbye', LANG_CODE))
