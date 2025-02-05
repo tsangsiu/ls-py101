@@ -59,14 +59,24 @@ while True:
     match operation:
         case '1':
             result = float(number1) + float(number2)
+            prompt(message('display_result', LANG_CODE)
+                   .format(RESULT = result))
         case '2':
             result = float(number1) - float(number2)
+            prompt(message('display_result', LANG_CODE)
+                   .format(RESULT = result))
         case '3':
             result = float(number1) * float(number2)
+            prompt(message('display_result', LANG_CODE)
+                   .format(RESULT = result))
         case '4':
-            result = float(number1) / float(number2)
-
-    prompt(message('display_result', LANG_CODE).format(RESULT = result))
+            try:
+                result = float(number1) / float(number2)
+            except ZeroDivisionError:
+                prompt(message('zero_division_error', LANG_CODE))
+            else:
+                prompt(message('display_result', LANG_CODE)
+                       .format(RESULT = result))
 
     prompt(message('ask_calculate_again', LANG_CODE))
     prompt(message('display_yes_no_options', LANG_CODE))
