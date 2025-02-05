@@ -1,4 +1,5 @@
 import json
+import os
 
 with open('calculator_messages.json', 'r') as file:
     MESSAGES = json.load(file)
@@ -20,8 +21,12 @@ def invalid_number(number_str):
 
     return False
 
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 # Main Program
 
+clear()
 prompt(message('choose_lang'))
 prompt(message('display_lang_options'))
 lang_code_num = input()
@@ -31,6 +36,7 @@ while lang_code_num not in LANG_CODE_TO_LANG.keys():
     lang_code_num = input()
 LANG_CODE = LANG_CODE_TO_LANG[lang_code_num]
 
+clear()
 prompt(message('welcome', LANG_CODE))
 
 while True:
@@ -59,22 +65,27 @@ while True:
     match operation:
         case '1':
             result = float(number1) + float(number2)
+            clear()
             prompt(message('display_result', LANG_CODE)
                    .format(RESULT = result))
         case '2':
             result = float(number1) - float(number2)
+            clear()
             prompt(message('display_result', LANG_CODE)
                    .format(RESULT = result))
         case '3':
             result = float(number1) * float(number2)
+            clear()
             prompt(message('display_result', LANG_CODE)
                    .format(RESULT = result))
         case '4':
             try:
                 result = float(number1) / float(number2)
             except ZeroDivisionError:
+                clear()
                 prompt(message('zero_division_error', LANG_CODE))
             else:
+                clear()
                 prompt(message('display_result', LANG_CODE)
                        .format(RESULT = result))
 
@@ -87,6 +98,9 @@ while True:
         calculate_again = input()
 
     if calculate_again == '2':
+        clear()
         break
+    
+    clear()
 
 prompt(message('goodbye', LANG_CODE))
