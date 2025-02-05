@@ -6,11 +6,11 @@ with open('calculator_messages.json', 'r') as file:
 with open('lang_code_to_lang.json', 'r') as file:
     LANG_CODE_TO_LANG = json.load(file)
 
-def message(message_key, lang_code):
+def message(message_key, lang_code="en"):
     return MESSAGES[lang_code][message_key]
 
-def prompt(message):
-    print(f'==> {message}')
+def prompt(msg):
+    print(f'==> {msg}')
 
 def invalid_number(number_str):
     try:
@@ -22,40 +22,38 @@ def invalid_number(number_str):
 
 # Main Program
 
-lang_code = "en"
-
-prompt(message('choose_lang', lang_code))
-prompt(message('display_lang_options', lang_code))
+prompt(message('choose_lang'))
+prompt(message('display_lang_options'))
 lang_code_num = input()
 
 while lang_code_num not in LANG_CODE_TO_LANG.keys():
-    prompt(message('display_valid_lang_code_nums', lang_code))
+    prompt(message('display_valid_lang_code_nums'))
     lang_code_num = input()
-lang_code = LANG_CODE_TO_LANG[lang_code_num]
+LANG_CODE = LANG_CODE_TO_LANG[lang_code_num]
 
-prompt(message('welcome', lang_code))
+prompt(message('welcome', LANG_CODE))
 
 while True:
-    prompt(message('ask_first_number', lang_code))
+    prompt(message('ask_first_number', LANG_CODE))
     number1 = input()
 
     while invalid_number(number1):
-        prompt(message('invalid_number', lang_code))
+        prompt(message('invalid_number', LANG_CODE))
         number1 = input()
 
-    prompt(message('ask_second_number', lang_code))
+    prompt(message('ask_second_number', LANG_CODE))
     number2 = input()
 
     while invalid_number(number2):
-        prompt(message('invalid_number', lang_code))
+        prompt(message('invalid_number', LANG_CODE))
         number2 = input()
 
-    prompt(message('ask_operation', lang_code))
-    prompt(message('display_operation_options', lang_code))
+    prompt(message('ask_operation', LANG_CODE))
+    prompt(message('display_operation_options', LANG_CODE))
     operation = input()
 
     while operation not in ['1', '2', '3', '4']:
-        prompt(message('invalid_operation_option', lang_code))
+        prompt(message('invalid_operation_option', LANG_CODE))
         operation = input()
 
     match operation:
@@ -68,17 +66,17 @@ while True:
         case '4':
             result = float(number1) / float(number2)
 
-    prompt(message('display_result', lang_code).format(RESULT = result))
+    prompt(message('display_result', LANG_CODE).format(RESULT = result))
 
-    prompt(message('ask_calculate_again', lang_code))
-    prompt(message('display_yes_no_options', lang_code))
+    prompt(message('ask_calculate_again', LANG_CODE))
+    prompt(message('display_yes_no_options', LANG_CODE))
     calculate_again = input()
 
     while calculate_again not in ['1', '2']:
-        prompt(message('invalid_yes_no', lang_code))
+        prompt(message('invalid_yes_no', LANG_CODE))
         calculate_again = input()
 
     if calculate_again == '2':
         break
 
-prompt(message('goodbye', lang_code))
+prompt(message('goodbye', LANG_CODE))
