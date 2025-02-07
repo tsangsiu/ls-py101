@@ -1,0 +1,17 @@
+{
+  "welcome": "Welcome to Mortgage Calculator!",
+  "get_loan_amount": "What is the loan amount (in dollars)?",
+  "invalid_loan_amount": "Please enter a valid loan amount (in dollars).",
+  "get_apr": "What is the annual percentage rate (in %) (for example, 5 for 5% or 2.5 for 2.5%)?",
+  "invalid_apr": "Please enter a valid annual percentage rate (in %).",
+  "get_loan_dur_year": "What is the loan duration (in years) (for example, 2 for 2 years and 6 months)?",
+  "invalid_loan_dur_year": "Please enter a valid loan duration (in years)",
+  "get_loan_dur_month": "And any additional months:",
+  "invalid_loan_dur_month": "Please enter a valid loan duration (in months)",
+  "invalid_loan_dur": "The loan duration can't be 0 months.",
+  "display_monthly_payment": "The monthly payment is ${0:.2f}.",
+  "ask_calc_again": "Would you like to do another calculation?",
+  "display_yes_no_options": "[Y]es   [N]o",
+  "invalid_yes_no": "You must choose either 'Y' or 'N'.",
+  "goodbye": "Thank you for using Mortgage Calculator! Goodbye!"
+}
