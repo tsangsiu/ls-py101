@@ -27,70 +27,73 @@ def clear():
 # Main Program
 
 clear()
-prompt(message('choose_lang'))
-prompt(message('display_lang_options'))
-lang_code_num = input()
+while True:
+    prompt(message('choose_lang'))
+    prompt(message('display_lang_options'))
+    lang_code_num = input().strip()
 
-while lang_code_num not in LANG_CODE_TO_LANG.keys():
+    if lang_code_num in LANG_CODE_TO_LANG.keys():
+        break
+
     prompt(message('display_valid_lang_code_nums'))
-    lang_code_num = input()
 LANG_CODE = LANG_CODE_TO_LANG[lang_code_num]
 
 clear()
 prompt(message('welcome', LANG_CODE))
 
 while True:
-    prompt(message('ask_first_number', LANG_CODE))
-    number1 = input()
+    while True:
+        prompt(message('ask_first_number', LANG_CODE))
+        number1 = input().strip()
 
-    while invalid_number(number1):
+        if not invalid_number(number1):
+            break
+
         prompt(message('invalid_number', LANG_CODE))
-        number1 = input()
 
-    prompt(message('ask_second_number', LANG_CODE))
-    number2 = input()
+    while True:
+        prompt(message('ask_second_number', LANG_CODE))
+        number2 = input().strip()
 
-    while invalid_number(number2):
+        if not invalid_number(number2):
+            break
+
         prompt(message('invalid_number', LANG_CODE))
-        number2 = input()
 
-    prompt(message('ask_operation', LANG_CODE))
-    prompt(message('display_operation_options', LANG_CODE))
-    operation = input()
+    while True:
+        prompt(message('ask_operation', LANG_CODE))
+        prompt(message('display_operation_options', LANG_CODE))
+        operation = input().strip()
 
-    while operation not in ['+', '-', '*', '/']:
+        if operation in ['+', '-', '*', '/']:
+            break
+
         prompt(message('invalid_operation_option', LANG_CODE))
-        operation = input()
 
-    match operation:
-        case '+':
-            result = float(number1) + float(number2)
-            prompt(message('display_result', LANG_CODE)
-                   .format(RESULT = result))
-        case '-':
-            result = float(number1) - float(number2)
-            prompt(message('display_result', LANG_CODE)
-                   .format(RESULT = result))
-        case '*':
-            result = float(number1) * float(number2)
-            prompt(message('display_result', LANG_CODE)
-                   .format(RESULT = result))
-        case '/':
-            try:
+    try:
+        match operation:
+            case '+':
+                result = float(number1) + float(number2)
+            case '-':
+                result = float(number1) - float(number2)
+            case '*':
+                result = float(number1) * float(number2)
+            case '/':
                 result = float(number1) / float(number2)
-            except ZeroDivisionError:
-                prompt(message('zero_division_error', LANG_CODE))
-            else:
-                prompt(message('display_result', LANG_CODE)
-                       .format(RESULT = result))
+    except ZeroDivisionError:
+        prompt(message('zero_division_error', LANG_CODE))
+    else:
+        prompt(message('display_result', LANG_CODE).format(RESULT = result))
 
-    prompt(message('ask_calculate_again', LANG_CODE))
-    prompt(message('display_yes_no_options', LANG_CODE))
-    calculate_again = input()
+    while True:
+        prompt(message('ask_calculate_again', LANG_CODE))
+        prompt(message('display_yes_no_options', LANG_CODE))
+        calculate_again = input().strip()
 
-    while calculate_again not in ['0', '1']:
+        if calculate_again in ['0', '1']:
+            break
+
         prompt(message('invalid_yes_no', LANG_CODE))
-        calculate_again = input()
 
     if calculate_again == '0':
         clear()
