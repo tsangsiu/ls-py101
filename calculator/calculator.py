@@ -58,34 +58,29 @@ while True:
     prompt(message('display_operation_options', LANG_CODE))
     operation = input()
 
-    while operation not in ['1', '2', '3', '4']:
+    while operation not in ['+', '-', '*', '/']:
         prompt(message('invalid_operation_option', LANG_CODE))
         operation = input()
 
     match operation:
-        case '1':
+        case '+':
             result = float(number1) + float(number2)
-            clear()
             prompt(message('display_result', LANG_CODE)
                    .format(RESULT = result))
-        case '2':
+        case '-':
             result = float(number1) - float(number2)
-            clear()
             prompt(message('display_result', LANG_CODE)
                    .format(RESULT = result))
-        case '3':
+        case '*':
             result = float(number1) * float(number2)
-            clear()
             prompt(message('display_result', LANG_CODE)
                    .format(RESULT = result))
-        case '4':
+        case '/':
             try:
                 result = float(number1) / float(number2)
             except ZeroDivisionError:
-                clear()
                 prompt(message('zero_division_error', LANG_CODE))
             else:
-                clear()
                 prompt(message('display_result', LANG_CODE)
                        .format(RESULT = result))
 
@@ -93,11 +88,11 @@ while True:
     prompt(message('display_yes_no_options', LANG_CODE))
     calculate_again = input()
 
-    while calculate_again not in ['1', '2']:
+    while calculate_again not in ['0', '1']:
         prompt(message('invalid_yes_no', LANG_CODE))
         calculate_again = input()
 
-    if calculate_again == '2':
+    if calculate_again == '0':
         clear()
         break
 

@@ -8,12 +8,12 @@
     "ask_second_number": "What's the second number?",
     "invalid_number": "Hmm... that doesn't look like a valid number.",
     "ask_operation": "What operation would you like to perform?",
-    "display_operation_options": "[1] Add   [2] Subtract   [3] Multiply   [4] Divide",
-    "invalid_operation_option": "You must choose 1, 2, 3, or 4.",
+    "display_operation_options": "[+] Add   [-] Subtract   [*] Multiply   [/] Divide",
+    "invalid_operation_option": "You must choose +, -, *, or /.",
     "zero_division_error": "[!] The divisor cannot be 0.",
     "display_result": "The result is: {RESULT}",
     "ask_calculate_again": "Would you like to do another calculation?",
-    "display_yes_no_options": "[1] Yes   [2] No",
+    "display_yes_no_options": "[0] No   [1] Yes",
     "invalid_yes_no": "You must choose either 1 or 2.",
     "goodbye": "Thank you for using this calculator! Goodbye!"
   },
@@ -24,13 +24,13 @@
     "ask_second_number": "請輸入第二個數字：",
     "invalid_number": "請輸入一個有效的數字：",
     "ask_operation": "你想要怎樣算？",
-    "display_operation_options": "[1] 加   [2] 減   [3] 乘   [4] 除",
-    "invalid_operation_option": "你必須選 1 、 2 、 3 或 4 。",
+    "display_operation_options": "[+] 加   [-] 減   [*] 乘   [/] 除",
+    "invalid_operation_option": "你必須選 + 、 - 、 * 或 / 。",
     "zero_division_error": "[!] 除數不能是 0 。",
     "display_result": "計算結果是： {RESULT}",
     "ask_calculate_again": "你還要再計算嗎？",
-    "display_yes_no_options": "[1] 要   [2] 不要",
-    "invalid_yes_no": "你必須選 1 或 2 。",
+    "display_yes_no_options": "[0] 不要   [1] 要",
+    "invalid_yes_no": "你必須選 0 或 1 。",
     "goodbye": "感謝使用本計算器！再見！"
   }
 }
