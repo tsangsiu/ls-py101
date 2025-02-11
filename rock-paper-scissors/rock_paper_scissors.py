@@ -35,13 +35,16 @@ def display_welcome_msg():
     choices_titlized = [choice.title() for choice in CHOICE_TO_WORD.values()]
     game_name = ' '.join(choices_titlized)
 
+    print("")
     prompt(f"Welcome to {game_name}!")
 
 def display_rule():
+    print("")
     prompt(f"Whoever reaches {WINS_NEEDED} " + \
            f"win{'s' if WINS_NEEDED > 1 else ''} first is the grand winner!")
 
 def get_player_choice():
+    print("")
     while True:
         prompt(f"Choose one:  {'  '.join(CHOICE_LEGENDS)}")
         player_choice = input().strip().lower()
@@ -49,6 +52,7 @@ def get_player_choice():
         if player_choice in CHOICES:
             break
 
+        print("")
         prompt("You must choose either " + \
                f"{', '.join(CHOICES[:-1])} or {CHOICES[-1]}.")
 
@@ -59,6 +63,7 @@ def get_computer_choice():
     return computer_choice
 
 def display_players_choices(player_choice, computer_choice):
+    print("")
     prompt(f'You chose {CHOICE_TO_WORD[player_choice]}, ' + \
            f'and computer chose {CHOICE_TO_WORD[computer_choice]}.')
 
@@ -73,6 +78,7 @@ def winner(player_choice, computer_choice):
     return winner_
 
 def display_round_winner(player_choice, computer_choice):
+    print("")
     winner_ = winner(player_choice, computer_choice)
 
     match winner_:
@@ -84,6 +90,7 @@ def display_round_winner(player_choice, computer_choice):
             prompt("It's a tie!")
 
 def display_grand_winner(scores):
+    print("")
     if scores['player'] == WINS_NEEDED:
         prompt("You are the grand winner!")
     else:
@@ -103,6 +110,7 @@ def display_scores(scores):
            f"Computer score: {scores['computer']}")
 
 def ask_play_again():
+    print("")
     while True:
         prompt("Would you like to play again?")
         prompt("Choose one:  [Y]es  [N]o")
@@ -111,11 +119,13 @@ def ask_play_again():
         if play_again in ['y', 'n']:
             break
 
+        print("")
         prompt("You must choose either y or n.")
 
     return play_again
 
 def display_goodbye_msg():
+    print("")
     prompt("Thank you for playing. Goodbye!")
 
 def game():
