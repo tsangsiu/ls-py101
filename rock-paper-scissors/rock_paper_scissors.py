@@ -18,6 +18,13 @@ CHOICES_TO_WIN ={
 CHOICES = list(CHOICE_TO_WORD.keys())
 WINS_NEEDED = 3
 
+"""
+To create the legend for each choice.
+For example, the legend for the choice "scissors" is "[Sc]issors". 
+"""
+CHOICE_LEGENDS = [f'[{choice.title()}]{word[len(choice):]}' \
+                  for choice, word in CHOICE_TO_WORD.items()]
+
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -35,23 +42,8 @@ def display_rule():
            f"win{'s' if WINS_NEEDED > 1 else ''} first is the grand winner!")
 
 def get_player_choice():
-
-    def choice_legend():
-        """
-        To create the legend for each choice.
-        For example, the legend for the choice "scissors" is "[Sc]issors". 
-        """
-
-        choice_legends = []
-
-        for choice, word in CHOICE_TO_WORD.items():
-            legend = f'[{choice.title()}]{word[len(choice):]}'
-            choice_legends.append(legend)
-
-        return choice_legends
-
     while True:
-        prompt(f"Choose one:  {'  '.join(choice_legend())}")
+        prompt(f"Choose one:  {'  '.join(CHOICE_LEGENDS)}")
         player_choice = input().strip().lower()
 
         if player_choice in CHOICES:
