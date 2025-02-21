@@ -14,6 +14,12 @@ print(0 or 2 >= 1.5 and 'c' > 'a')
 # => True
 ```
 
+#### Note
+
+```python
+print(1 or 2 >= 1.5 and 'c' > 'a')  # => 1
+```
+
 ### 2
 
 What does the following code print?
@@ -28,11 +34,11 @@ else:
     print(1, lst1)
 ```
 
-'''
+```
 lst1 -> [1, 2, 3]
 lst2 -> 0
 1 [1, 2, 3]
-'''
+```
 
 ### 3
 
@@ -50,11 +56,11 @@ print(reverse_list1(lst))
 print(reverse_list2(lst))
 ```
 
-'''
+```
 reverse_list1(lst) -> ['d', 'c', 'b', 'a']
 lst = ['d', 'c', 'b', 'a']
 reverse_list2(lst) -> None
-'''
+```
 
 ### 4
 
@@ -72,10 +78,10 @@ print(swap(text))
 print(text)
 ```
 
-'''
+```
 HELLO! I AM ELOISE.
 Hello! I am Eloise.
-'''
+```
 
 ### 5
 
@@ -94,13 +100,13 @@ greet(greeting)
 print(greeting)
 ```
 
-'''
+```
 greeting -> 'Hello'
 => greeting -> 'Hello world'
 
 Hello world
 Hello
-'''
+```
 
 #### B
 
@@ -117,12 +123,12 @@ greet()
 print(greeting)
 ```
 
-'''
+```
 greeting = greeting + " world"
 -> UnboundLocalError
 
 Hello
-'''
+```
 
 ### 6
 
@@ -138,9 +144,9 @@ def shout(text):
 print(shout('hello') + exclamation_marks)
 ```
 
-'''
+```
 HELLO¡¡¡!!!
-'''
+```
 
 ### 7
 
@@ -155,7 +161,7 @@ def shout(text):
 print(shout('hello') + exclamation_marks)
 ```
 
-'''
+```
 1. shout('hello')
 HELLO!!!
 
@@ -163,7 +169,7 @@ HELLO!!!
 !!!
 
 HELLO!!!!!!
-'''
+```
 
 ### 8
 
@@ -213,10 +219,10 @@ print(result1)
 print(result2)
 ```
 
-'''
+```
 numbers -> [1, 2, 3, 5] <- result1
 result2 -> [1, 2, 3, 5, 5]
-'''
+```
 
 #### Note
 
@@ -241,13 +247,13 @@ print(nums2)
 print(return_value1)
 ```
 
-'''
+```
 nums = [10, 20, 30, 40]
 nums1 = [10, 20, 30, 40] -> [10, 20, 40]
 nums2 = [10, 20, 30, 40] -> [10, 20, 40]
 
 None
-'''
+```
 
 #### Note
 
